@@ -40,7 +40,8 @@ async function tailorResume(resumeText: string, jobDescription: string): Promise
   const response = await client.messages.create({
     model: 'claude-opus-4-6',
     max_tokens: 4000,
-    thinking: { type: 'adaptive' },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    thinking: { type: 'adaptive' } as any,
     system: `You are an expert resume writer and career coach. Given a candidate's existing resume and a job description,
 create a tailored resume that highlights the most relevant experience, skills, and achievements for that specific role.
 

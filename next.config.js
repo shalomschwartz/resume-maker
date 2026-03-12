@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ['mammoth', 'pdfkit'],
-  },
+  serverExternalPackages: ['mammoth', 'pdfkit'],
 }
 
 module.exports = nextConfig
